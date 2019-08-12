@@ -1,0 +1,17 @@
+1 1
+0 0 N
+GA
+0 0 W
+GA
+0 1 S
+DA
+0 1 E
+GA
+1 1 W
+DA
+1 1 S
+GA
+1 0 N
+DA
+1 0 W
+GA

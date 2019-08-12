@@ -1,0 +1,24 @@
+package com.xebia.xebia_tondeuse;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.List;
+
+public class TondeuseCoordonneePelouseHorsDePorteTest {
+
+    private String fileName="src/test/resources/programmeTondeuseCoordonneeHorsDePorte.dat";
+    private TondeuseProgrammeur tondeuseProgrammeur=null;
+    List<Tondeuse> listTondeuse=null;
+
+    @Before
+    public void setUp(){
+        tondeuseProgrammeur= new TondeuseProgrammeur();
+        listTondeuse=tondeuseProgrammeur.programme(fileName);
+    }
+
+    @Test(expected = PelouseDimentionException.class)
+    public void shouldReturnException()
+    {
+        listTondeuse.forEach(tondeuse->tondeuse.tondre(tondeuseProgrammeur.getPelouse()));
+    }
+}
