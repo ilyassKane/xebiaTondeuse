@@ -14,7 +14,7 @@ public class TondeuseCasLimiteTest {
 
     @Before
     public void setUp(){
-        tondeuseProgrammeur= new TondeuseProgrammeur();
+        tondeuseProgrammeur= new TondeuseProgrammeur(new TondeuseProgrammeValidation());
         listTondeuse=tondeuseProgrammeur.programme(fileName);
         listTondeuse.forEach(tondeuse->tondeuse.tondre(tondeuseProgrammeur.getPelouse()));
     }

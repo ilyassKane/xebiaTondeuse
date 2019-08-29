@@ -16,7 +16,7 @@ public class TondeuseTest {
 
     @Before
     public void setUp(){
-        tondeuseProgrammeur= new TondeuseProgrammeur();
+        tondeuseProgrammeur= new TondeuseProgrammeur(new TondeuseProgrammeValidation());
         listTondeuse=tondeuseProgrammeur.programme(fileName);
         listTondeuse.forEach(tondeuse->tondeuse.tondre(tondeuseProgrammeur.getPelouse()));
     }
@@ -24,5 +24,10 @@ public class TondeuseTest {
     @Test
     public void shouldReturn1_3_N(){
         assertEquals("1 3 N",listTondeuse.get(0).getPosition().toString());
+    }
+    
+    @Test
+    public void shouldReturn5_1_E(){
+        assertEquals("5 1 E",listTondeuse.get(1).getPosition().toString());
     }
 }

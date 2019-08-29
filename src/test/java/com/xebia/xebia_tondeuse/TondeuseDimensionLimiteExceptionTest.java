@@ -12,7 +12,7 @@ public class TondeuseDimensionLimiteExceptionTest {
 
     @Before
     public void setUp(){
-        tondeuseProgrammeur= new TondeuseProgrammeur();
+        tondeuseProgrammeur= new TondeuseProgrammeur(new TondeuseProgrammeValidation());
         listTondeuse=tondeuseProgrammeur.programme(fileName);
     }
 

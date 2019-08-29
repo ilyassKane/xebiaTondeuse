@@ -15,7 +15,7 @@ public class PositionTest {
         position=new Position();
         position.setX(1);
         position.setY(1);
-        position.setOrientation("N");
+        position.setOrientation(OrientationTondeuse.NORTH);
         pelouse=new Pelouse(5,5);
     }
 
